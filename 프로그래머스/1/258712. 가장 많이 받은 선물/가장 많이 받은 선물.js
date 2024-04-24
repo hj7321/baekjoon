@@ -32,7 +32,7 @@ function solution(friends, gifts) {
   // 다음 달에 받을 선물 개수 입력하는 배열 만들기
   let howManyTake = new Array(friends.length).fill(0);
 
-  // [2] 선물 주고받은 수 비교하기
+  // 선물 주고받은 수 비교하기
   for(let i = 0; i < friends.length - 1; i++) {
     for(let j = i+1; j < friends.length; j++) {
       if(giveAndTake[i][j] > giveAndTake[j][i]) howManyTake[i]++;
