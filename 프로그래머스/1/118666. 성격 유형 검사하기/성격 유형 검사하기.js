@@ -11,13 +11,13 @@ function solution(survey, choices) {
     N: 0,
   };
 
-  choices.reduce((_, cur, idx) => {
+  choices.forEach((cur, idx) => {
     if (cur < 4) {
       obj[survey[idx][0]] += Math.abs(cur - 4);
     } else if (cur > 4) {
       obj[survey[idx][1]] += cur - 4;
     }
-  }, 0);
+  });
 
   if (obj.R >= obj.T) answer += "R";
   else answer += "T";
