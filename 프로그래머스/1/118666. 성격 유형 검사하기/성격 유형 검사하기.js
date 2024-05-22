@@ -19,14 +19,10 @@ function solution(survey, choices) {
     }
   });
 
-  if (obj.R >= obj.T) answer += "R";
-  else answer += "T";
-  if (obj.C >= obj.F) answer += "C";
-  else answer += "F";
-  if (obj.J >= obj.M) answer += "J";
-  else answer += "M";
-  if (obj.A >= obj.N) answer += "A";
-  else answer += "N";
+  answer += obj.R >= obj.T ? "R" : "T";
+  answer += obj.C >= obj.F ? "C" : "F";
+  answer += obj.J >= obj.M ? "J" : "M";
+  answer += obj.A >= obj.N ? "A" : "N";
 
   return answer;
 }
